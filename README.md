@@ -204,7 +204,10 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+* Andrea Manfroni - andrea.manfroni@studio.unibo.it
+* Fabio Grimandi  - 
+* Giovanni Oltrecolli - 
+* Stefano Maggioreni - 
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
