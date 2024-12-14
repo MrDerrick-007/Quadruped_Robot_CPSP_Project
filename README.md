@@ -68,7 +68,10 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+#Obiettivo finale
+A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da poter allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
+Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esportare il modello allenato in un Raspberry Pi4 montato all'interno del quadrupede da noi stampato, al fine di replicare i movimenti ottenuti in simulazione nella realtà.
+
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -146,6 +149,11 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
+Tesi: https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf
+Laura Graesser - Foundations of Deep Reinforcement Learning: Theory and Practice in Python
+Sutton, Barto - http://incompleteideas.net/book/the-book-2nd.html
+Nota: l'algoritmo di RL che usate è PPO della classe actor-critic
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -158,10 +166,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Isaac Gym
     - [x] Install
     - [x] Try the first examples
-- [x] Add back to top links
-- [x] Add Additional Templates w/ Examples
-- [x] Add "components" document to easily copy & paste sections of the readme
-- [x] Multi-language Support
+- [x] Import the fixed URDF in the Isaac environment
+- [x] Analyze and test of the Anymal example
+- [x] Create a new environment for the robot
+- [x] Simulation
     - [x] Chinese
     - [x] Spanish
 
