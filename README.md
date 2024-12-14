@@ -149,9 +149,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-Tesi: https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf
-Laura Graesser - Foundations of Deep Reinforcement Learning: Theory and Practice in Python
-Sutton, Barto - http://incompleteideas.net/book/the-book-2nd.html
+
 Nota: l'algoritmo di RL che usate è PPO della classe actor-critic
 
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -229,8 +227,11 @@ Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+List of resources we find helpful for the project.
 
+* [Sebastiano Mengozzi Thesis]([http://incompleteideas.net/book/the-book-2nd.html](https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf))
+* [Sutton, Barto](http://incompleteideas.net/book/the-book-2nd.html)
+* [Laura Graesser - Foundations of Deep Reinforcement Learning](https://www.oreilly.com/library/view/foundations-of-deep/9780135172490/)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
