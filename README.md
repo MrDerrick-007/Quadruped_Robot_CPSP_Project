@@ -229,7 +229,7 @@ Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
 
 List of resources we find helpful for the project.
 
-* [Sebastiano Mengozzi Thesis]([http://incompleteideas.net/book/the-book-2nd.html](https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf))
+* [Sebastiano Mengozzi Thesis](https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf)
 * [Sutton, Barto](http://incompleteideas.net/book/the-book-2nd.html)
 * [Laura Graesser - Foundations of Deep Reinforcement Learning](https://www.oreilly.com/library/view/foundations-of-deep/9780135172490/)
 * [Choose an Open Source License](https://choosealicense.com)
