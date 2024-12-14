@@ -154,16 +154,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-
+- [x] Create a Ubuntu partition
 - [x] Isaac Gym
-    - [ ] Install
-    - [ ] Try the first examples
+    - [x] Install
+    - [x] Try the first examples
 - [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Add Additional Templates w/ Examples
+- [x] Add "components" document to easily copy & paste sections of the readme
+- [x] Multi-language Support
+    - [x] Chinese
+    - [x] Spanish
 
 See the [open issues](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues) for a full list of proposed features (and known issues).
 
