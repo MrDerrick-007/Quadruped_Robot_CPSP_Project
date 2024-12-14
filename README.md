@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project">
     <img src="logo1.png" alt="Logo" width="150" height="150">
   </a>
 
@@ -163,7 +163,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,8 +185,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
+<a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MrDerrick-007/Quadruped_Robot_CPSP_Project" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
