@@ -65,10 +65,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 #Obiettivo finale
+
 A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da poter allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
 Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esportare il modello allenato in un Raspberry Pi4 montato all'interno del quadrupede da noi stampato, al fine di replicare i movimenti ottenuti in simulazione nella realtà.
 
@@ -86,7 +84,7 @@ Use the `BLANK_README.md` to get started.
 
 
 
-### Built With
+<!--### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
@@ -100,7 +98,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 
 
 <!-- GETTING STARTED -->
