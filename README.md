@@ -209,7 +209,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 * Giovanni Oltrecolli - 
 * Stefano Maggioreni - 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
