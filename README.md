@@ -174,7 +174,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [x] with custom rewards
 - [ ] Sim2Real
     - [x] Build the robot
-    - [ ] Implement the NN into the physical system  
+    - [ ] NN deployment in the Raspberry platform 
 
 See the [open issues](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues) for a full list of proposed features (and known issues).
 
