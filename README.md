@@ -74,7 +74,10 @@ Starting from the URDF model, the goal is to design and train a neural network t
 <details>
   <summary>Isaac Gym Overview</summary>
   <ol>
-    Isaac Gym is NVIDIA’s prototype physics simulation environment for reinforcement learning research. It allows developers to experiment with end-to-end      GPU accelerated RL for physically based systems. Unlike other similar ‘gym’ style systems, in Isaac Gym, simulation can run on the GPU, storing results in GPU     tensors rather than copying them back to CPU memory. Isaac Gym includes a basic PPO implementation and a straightforward RL task system that can be used with      it, but users may substitute alternative task systems and RL algorithms as desired. More information on https://developer.nvidia.com/isaac-gym
+    Isaac Gym is NVIDIA’s prototype physics simulation environment for reinforcement learning research. It allows developers to experiment with end-to-end      GPU accelerated RL for physically based systems. Unlike other similar ‘gym’ style systems, in Isaac Gym, simulation can run on the GPU, storing results in GPU     tensors rather than copying them back to CPU memory. Isaac Gym includes a basic PPO implementation and a straightforward RL task system that can be used with      it, but users may substitute alternative task systems and RL algorithms as desired. 
+
+  **More information on** 
+    https://developer.nvidia.com/isaac-gym
 </ol>
 </details>
 
@@ -83,6 +86,8 @@ Starting from the URDF model, the goal is to design and train a neural network t
   <summary>SKRL Overview</summary>
   <ol>
     Skrl is an open-source library for Reinforcement Learning written in Python. It allows loading and configuring NVIDIA Isaac Gym environments, enabling agents’ simultaneous training by scopes (subsets of environments among all available environments), which may or may not share resources, in the same run.
+
+  **Please, visit the documentation for usage details and examples** https://skrl.readthedocs.io
 </ol>
 </details>
 
