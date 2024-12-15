@@ -166,9 +166,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Isaac Gym
     - [x] Install
     - [x] Try the first examples
-- [x] Import the fixed URDF in the Isaac environment
-- [x] Analyze and test of the Anymal example
+- [x] Analyze Isaac's docs and test the Anymal example
 - [x] Create a new environment for the robot
+- [x] Import the fixed URDF in the Isaac environment
 - [x] Training
     - [x] with Anymal's rewards
     - [x] with custom rewards
