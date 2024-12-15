@@ -79,6 +79,14 @@ Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esporta
 </ol>
 </details>
 
+
+<details>
+  <summary>SKRL Overview</summary>
+  <ol>
+    Skrl is an open-source library for Reinforcement Learning written in Python. It allows loading and configuring NVIDIA Isaac Gym environments, enabling agents’ simultaneous training by scopes (subsets of environments among all available environments), which may or may not share resources, in the same run.
+</ol>
+</details>
+
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
 * You shouldn't be doing the same tasks over and over like creating a README from scratch
