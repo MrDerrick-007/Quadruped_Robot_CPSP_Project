@@ -134,8 +134,10 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    git clone https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
    ```
-2. Open the terminal inside "isaccgym envs" folder
-  
+2. Go inside "isaccgym envs" folder
+   ```sh
+   cd Quadruped_Robot_CPSP_Project/isaacgym/isaacgym envs/
+   ```
 3. Run the simulation with
    ```js
    python3 torch_anymal_ppo.py 
@@ -167,7 +169,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Import the fixed URDF in the Isaac environment
 - [x] Analyze and test of the Anymal example
 - [x] Create a new environment for the robot
-- [x] Simulation
+- [x] Training
     - [x] with Anymal's rewards
     - [x] with custom rewards
 - [ ] Sim2Real
