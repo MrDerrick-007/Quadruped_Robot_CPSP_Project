@@ -238,6 +238,7 @@ Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
 ## Acknowledgments
 
 List of resources we find helpful for the project.
+* [IsaacGym Github](https://github.com/isaac-sim/IsaacGymEnvs/tree/main)
 * [SKRL Guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 * [Robot Assembly Guide](https://github.com/michaelkubina/SpotMicroESP32)
 * [Sebastiano Mengozzi Thesis](https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf)
