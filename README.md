@@ -132,6 +132,7 @@ OS: Ubuntu 20.04
 
 Isaac Gym: [guide for the installation](aggiungere_file_docs) ##Da aggiungere file:///home/mrderrick/Desktop/isaacgym/docs/ nel file della repo
 
+SKRL: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 
 ### Installation
 
