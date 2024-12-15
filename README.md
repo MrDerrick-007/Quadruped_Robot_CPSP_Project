@@ -16,7 +16,7 @@
     <img src="images/logo.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Quadruped Robot Project
+  <h3 align="center">Quadruped Robot Project :smile:
 </h3>
 
   <p align="center">
@@ -90,15 +90,6 @@ Starting from the URDF model, the goal is to design and train a neural network t
   **Please, visit the documentation for usage details and examples** https://skrl.readthedocs.io
 </ol>
 </details>
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -190,9 +181,6 @@ See the [open issues](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Proj
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
