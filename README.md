@@ -123,6 +123,9 @@ Instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+OS: Ubuntu 20.04
+
+Isaac Gym: [guide for the installation](www.wikipedia.com)
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
