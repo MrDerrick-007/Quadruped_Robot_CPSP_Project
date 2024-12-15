@@ -20,7 +20,11 @@
 </h3>
 
   <p align="center">
-    An awesome README to jumpstart your projects!
+    Exam project of CPSP by 
+     Andrea Manfroni,
+     Fabrio Grimandi, 
+     Giovanni Oltrecolli, 
+     Stefano Maggioreni.
     <br />
     <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project"><strong>Explore the docs »</strong></a>
     <br />
