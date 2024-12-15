@@ -119,16 +119,17 @@ Instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-OS: Ubuntu 20.04
+* OS: Ubuntu 20.04
 
-Isaac Gym: [guide for the installation](aggiungere_file_docs) ##Da aggiungere file:///home/mrderrick/Desktop/isaacgym/docs/ nel file della repo
+* Python Version: xxx
 
-SKRL: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
+* Pytorch Version: xxx
+
+* Isaac Gym: [guide for the installation](aggiungere_file_docs) ##Da aggiungere file:///home/mrderrick/Desktop/isaacgym/docs/ nel file della repo
+
+* SKRL: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
    ```sh
    git clone https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
