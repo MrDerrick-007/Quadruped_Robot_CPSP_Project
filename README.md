@@ -72,6 +72,12 @@
 A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
 Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esportare il modello allenato in un Raspberry Pi4 montato all'interno del quadrupede da noi stampato, al fine di replicare i movimenti ottenuti in simulazione nella realtà.
 
+<details>
+  <summary>Isaac Gym Overview</summary>
+  <ol>
+    Isaac Gym is NVIDIA’s prototype physics simulation environment for reinforcement learning research. It allows developers to experiment with end-to-end      GPU accelerated RL for physically based systems. Unlike other similar ‘gym’ style systems, in Isaac Gym, simulation can run on the GPU, storing results in GPU     tensors rather than copying them back to CPU memory. Isaac Gym includes a basic PPO implementation and a straightforward RL task system that can be used with      it, but users may substitute alternative task systems and RL algorithms as desired. More information on https://developer.nvidia.com/isaac-gym
+</ol>
+</details>
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
