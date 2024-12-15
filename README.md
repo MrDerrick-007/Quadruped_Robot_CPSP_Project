@@ -69,9 +69,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-#Obiettivo finale
-
-A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da poter allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
+A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
 Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esportare il modello allenato in un Raspberry Pi4 montato all'interno del quadrupede da noi stampato, al fine di replicare i movimenti ottenuti in simulazione nella realtà.
 
 
@@ -170,8 +168,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Analyze and test of the Anymal example
 - [x] Create a new environment for the robot
 - [x] Simulation
-    - [x] Chinese
-    - [x] Spanish
+    - [x] with Anymal's rewards
+    - [x] with custom rewards
+- [ ] Sim2Real
+    - [x] Buil the robot
+    - [ ] Implement the NN into the physical system  
 
 See the [open issues](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues) for a full list of proposed features (and known issues).
 
@@ -230,7 +231,7 @@ Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
 ## Acknowledgments
 
 List of resources we find helpful for the project.
-
+* [Robot Assembly Guide](https://github.com/michaelkubina/SpotMicroESP32)
 * [Sebastiano Mengozzi Thesis](https://amslaurea.unibo.it/28648/1/SebastianoMengozzi_Thesis.pdf)
 * [Sutton, Barto](http://incompleteideas.net/book/the-book-2nd.html)
 * [Laura Graesser - Foundations of Deep Reinforcement Learning](https://www.oreilly.com/library/view/foundations-of-deep/9780135172490/)
