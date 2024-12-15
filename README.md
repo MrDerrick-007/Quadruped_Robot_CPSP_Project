@@ -215,7 +215,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 * Andrea Manfroni - andrea.manfroni@studio.unibo.it
 * Fabio Grimandi  - 
 * Giovanni Oltrecolli - giovanni.oltrecolli2@studio.unibo.it
-* Stefano Maggioreni - 
+* Stefano Maggioreni - stefano.maggioreni@studio.unibo.it
 
 Project Link: [https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git)
 
