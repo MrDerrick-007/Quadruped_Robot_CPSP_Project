@@ -69,8 +69,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A partire dal modello URDF, l'obiettivo è quello di realizzare una rete neurale da allenare al fine di permettere al quadrupede di avanzare in linea retta senza la presenza di ostacoli. 
-Successivamente l'idea è quella di procedere con il Sim-to-Real, ovvero esportare il modello allenato in un Raspberry Pi4 montato all'interno del quadrupede da noi stampato, al fine di replicare i movimenti ottenuti in simulazione nella realtà.
+Starting from the URDF model, the goal is to design and train a neural network to enable the quadruped robot to move forward in a straight line without encountering obstacles. Once this initial phase is complete, the plan is to proceed with the Sim-to-Real transfer. This involves deploying the trained model onto a Raspberry Pi 4 embedded within the 3D-printed quadruped, allowing the movements achieved in simulation to be replicated in the real world.
 
 <details>
   <summary>Isaac Gym Overview</summary>
