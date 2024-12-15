@@ -289,6 +289,6 @@ List of resources we find helpful for the project.
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 
-##Credits
+## Credits
 URDF model of [Nicola Russo](https://github.com/nicrusso7)
 <p align="right"><a href="#readme-top">back to top</a></p>
