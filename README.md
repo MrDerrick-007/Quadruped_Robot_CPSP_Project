@@ -253,7 +253,7 @@ List of resources we find helpful for the project.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/MrDerrick-007/Quadruped_Robot_CPSP_Project.svg?style=for-the-badge
-[contributors-url]: https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/graphs/contributors
+[contributors-url]: https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project//graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/MrDerrick-007/Quadruped_Robot_CPSP_Project.svg?style=for-the-badge
 [forks-url]: https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/network/members
 [stars-shield]: https://img.shields.io/github/stars/MrDerrick-007/Quadruped_Robot_CPSP_Project.svg?style=for-the-badge
