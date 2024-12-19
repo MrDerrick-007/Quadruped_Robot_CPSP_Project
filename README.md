@@ -125,8 +125,7 @@ To get a local copy up and running follow these simple example steps.
 
 * Pytorch Version: xxx
 
-* Isaac Gym: [guide for the installation](https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/docs/install.html)
-* (https://MrDerrick-007.github.io/BreadcrumbsQuadruped_Robot_CPSP_Project/docs/install.html) 
+* Isaac Gym: [guide for the installation](https://MrDerrick-007.github.io/BreadcrumbsQuadruped_Robot_CPSP_Project/docs/install.html) 
 
 * Skrl: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 
