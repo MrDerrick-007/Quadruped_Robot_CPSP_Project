@@ -127,7 +127,7 @@ To get a local copy up and running follow these simple example steps.
 
 * Isaac Gym: [guide for the installation](aggiungere_file_docs) ##Da aggiungere file:///home/mrderrick/Desktop/isaacgym/docs/ nel file della repo
 
-* SKRL: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
+* Skrl: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 
 ### Installation
 1. Clone the repo
