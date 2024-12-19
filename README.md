@@ -125,7 +125,7 @@ To get a local copy up and running follow these simple example steps.
 
 * Pytorch Version: xxx
 
-* Isaac Gym: [guide for the installation](aggiungere_file_docs) ##Da aggiungere file:///home/mrderrick/Desktop/isaacgym/docs/ nel file della repo
+* Isaac Gym: [guide for the installation](docs/install.html) 
 
 * Skrl: [installation guide](https://skrl.readthedocs.io/en/latest/intro/installation.html)
 
