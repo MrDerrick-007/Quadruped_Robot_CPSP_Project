@@ -151,7 +151,7 @@ To get a local copy up and running follow these simple example steps.
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-![](videos/final-training.gif)
+![](videos/final-training.mp4)
 Nota: l'algoritmo di RL che usate è PPO della classe actor-critic
 
 _For more examples, please refer to the [Documentation](https://example.com)_
