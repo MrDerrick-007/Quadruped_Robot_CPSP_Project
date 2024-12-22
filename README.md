@@ -219,7 +219,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 ## Contact
 
 * Andrea Manfroni - andrea.manfroni@studio.unibo.it
-* Fabio Grimandi  - 
+* Fabio Grimandi  - fabio.grimandi@studio.unibo.it
 * Giovanni Oltrecolli - giovanni.oltrecolli2@studio.unibo.it
 * Stefano Maggioreni - stefano.maggioreni@studio.unibo.it
 
