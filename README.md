@@ -26,7 +26,7 @@
      Giovanni Oltrecolli, 
      Stefano Maggioreni.
     <br />
-    <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project"><strong>Explore the docs »</strong></a>
+    <!--<a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
     <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project">View Demo</a>
