@@ -29,7 +29,9 @@
     <!--<a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project"><strong>Explore the docs »</strong></a> -->
     <br />
     <!--<a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project">View Demo</a> -->
+    -
     <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    -
     <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
