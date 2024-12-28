@@ -121,9 +121,9 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 * OS: Ubuntu 20.04
 
-* Python Version: xxx
+* Python Version: 3.8.10
 
-* Pytorch Version: xxx
+* Pytorch Version: 2.2.1
 
 * Isaac Gym: [guide for the installation](https://MrDerrick-007.github.io/Quadruped_Robot_CPSP_Project/install.html) 
 
