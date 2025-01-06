@@ -151,7 +151,7 @@ To get a local copy up and running follow these simple example steps.
 In this section, you can see the main parts of the Isaac Gym folder.
 
 ### **Anymal.py:**
-
+<details>
 In the file "anymal.py," the main functions for initializing and training the environment are listed: `create_sim`, `pre_physics_step`, and `post_physics_step`. These are generic functions present in any environment training setup.
 
 The first function, `create_sim`, is used for initialization. It is responsible for creating the terrain (in our case, a flat, obstacle-free surface) and the environment, with the URDF correctly modified and implemented.
@@ -205,8 +205,54 @@ Therefore, multiple simulations must be run while continuously varying the rewar
 - **Too Low in the 'Z' Axis:** This parameter forces a reset when the main body gets too close to the ground. It ensures the environment keeps the main body raised a minimum distance from the ground, aiming for a satisfactory movement.
 
 - **Pitch and Roll:** Similar to the previous reset condition, this parameter calculates the pitch and roll of the environment. A reset occurs if the body tilts excessively forward or sideways. This reset condition was chosen because the available motors lack sufficient power, preventing training in situations where the environment needs to rise from a fall. By continuously resetting, we ensure the environment remains as parallel as possible to the ground throughout the movement, preventing overstraining the motors.
+</details>
+---
 
 
+### Anymal.yaml
+This YAML configuration file is used to define the parameters and settings for the simulation of the robot in an environment, as part of a reinforcement learning setup in Isaac Gym.
+
+### General Structure:
+1. **name**: Specifies the name of the object to be simulated, which is "Anymal" (a robot model).
+   
+2. **physics_engine**: Refers to the physics engine to be used, with its configuration coming from an external file (`config.yaml`).
+
+3. **env**: This section defines the environment settings.
+   - **numEnvs**: The number of environments that will be trained simultaneously (default is 128 if not specified).
+   - **envSpacing**: The spacing between each environment in the simulation.
+   - **clipObservations**: Limits the observation values for training.
+   - **clipActions**: Limits the action values for training.
+   - **plane**: Physical properties of the ground, including friction and restitution (bounce).
+   - **baseInitState**: The initial state of the robot in the environment, including its position (x, y, z), rotation (as a quaternion), and velocities (linear and angular).
+   - **randomCommandVelocityRanges**: Defines the range of velocities the robot will be able to achieve in the x and y directions (used in training).
+   - **control**: Controls for robot movement, including PD controller parameters for stiffness and damping, as well as the control frequency.
+   - **defaultJointAngles**: Specifies the default target joint angles when no action is taken (i.e., action = 0).
+   - **urdfAsset**: Configuration related to the URDF (Unified Robot Description Format) model, such as whether to collapse fixed joints or fix the base link.
+   
+4. **learn**: Contains learning-specific parameters.
+   - **rewards**: Defines reward scaling factors for linear and angular velocity, and torque, influencing how rewards are calculated during training.
+   - **normalization**: Scales different physical quantities like linear and angular velocity to adjust the agent's learning dynamics.
+   - **episodeLength_s**: Specifies the length of each episode (in seconds).
+   
+5. **viewer**: Settings for the camera view during simulation.
+   - **refEnv**: The reference environment for the camera view.
+   - **pos**: The camera position.
+   - **lookat**: The point the camera will focus on.
+
+6. **enableCameraSensors**: Indicates whether camera sensors are enabled in the environment.
+
+7. **sim**: Simulation parameters.
+   - **dt**: Time step of the simulation.
+   - **substeps**: The number of substeps per simulation update.
+   - **up_axis**: Defines the up-axis (in this case, "z").
+   - **use_gpu_pipeline**: Whether to use GPU-based simulation for faster processing.
+   - **gravity**: Gravity values to apply to the simulation (standard gravity in the z-direction).
+   - **physx**: Configuration related to the NVIDIA PhysX simulation, including the number of threads, solver type, and GPU usage.
+   
+8. **task**: Defines task-specific randomization parameters and settings.
+   - **randomize**: Specifies whether to apply randomization.
+   - **randomization_params**: Defines how and when to randomize different simulation parameters (e.g., noise in observations and actions, gravity, physical properties of the robot).
+     - Randomization is done using Gaussian distribution or scaling methods for various parameters, including gravity, friction, damping, and more.
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
