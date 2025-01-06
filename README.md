@@ -206,10 +206,11 @@ Therefore, multiple simulations must be run while continuously varying the rewar
 
 - **Pitch and Roll:** Similar to the previous reset condition, this parameter calculates the pitch and roll of the environment. A reset occurs if the body tilts excessively forward or sideways. This reset condition was chosen because the available motors lack sufficient power, preventing training in situations where the environment needs to rise from a fall. By continuously resetting, we ensure the environment remains as parallel as possible to the ground throughout the movement, preventing overstraining the motors.
 </details>
+
 ---
 
-
 ### Anymal.yaml
+<details>
 This YAML configuration file is used to define the parameters and settings for the simulation of the robot in an environment, as part of a reinforcement learning setup in Isaac Gym.
 
 ### General Structure:
@@ -253,8 +254,9 @@ This YAML configuration file is used to define the parameters and settings for t
    - **randomize**: Specifies whether to apply randomization.
    - **randomization_params**: Defines how and when to randomize different simulation parameters (e.g., noise in observations and actions, gravity, physical properties of the robot).
      - Randomization is done using Gaussian distribution or scaling methods for various parameters, including gravity, friction, damping, and more.
+</details>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
 
 ![](videos/final-training.gif)
 ![](videos/no-trainig1.gif)
