@@ -257,11 +257,10 @@ This YAML configuration file is used to define the parameters and settings for t
 </details>
 
 ---
+### torch_anymal_ppo.py
 
 <details>
-  
-### torch_anymal_ppo.py
-This script is set up to train a reinforcement learning (RL) agent using the **Proximal Policy Optimization (PPO)** algorithm on the **Isaac Gym environment** for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
+This script is set up to train a reinforcement learning (RL) agent using the Proximal Policy Optimization (PPO) algorithm on the Isaac Gym environment for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
 
 ### Key Components:
 1. **Dependencies and Libraries**:
@@ -359,7 +358,6 @@ This script is set up to train a reinforcement learning (RL) agent using the **P
     trainer.train()
     ```
     - Starts the training process, where the agent interacts with the environment, collects experiences, and updates its policy using PPO.
-</details>
 
 ---
 
@@ -375,6 +373,7 @@ This script is set up to train a reinforcement learning (RL) agent using the **P
 # trainer.eval()
 ```
 - If you want to evaluate a pre-trained agent (instead of training), you can download the model from Hugging Face and load it into the agent before running the `eval()` method.
+</details>
 
 ---
 
