@@ -77,13 +77,14 @@ Starting from the URDF model, the goal is to design and train a neural network t
 
 
 <details>
-  <summary><b>SKRL Overview</summary</b></summary>
+  <summary><b>SKRL Overview</b></summary>
   <ol>
     Skrl is an open-source library for Reinforcement Learning written in Python. It allows loading and configuring NVIDIA Isaac Gym environments, enabling agents’ simultaneous training by scopes (subsets of environments among all available environments), which may or may not share resources, in the same run.
-
-  **Please, visit the documentation for usage details and examples** https://skrl.readthedocs.io**
-</ol>
+    
+  <b>Please, visit the documentation for usage details and examples:</b> <a href="https://skrl.readthedocs.io">https://skrl.readthedocs.io</a>
+  </ol>
 </details>
+
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
