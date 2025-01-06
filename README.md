@@ -66,7 +66,7 @@
 Starting from the URDF model, the goal is to design and train a neural network to enable the quadruped robot to move forward in a straight line without encountering obstacles. Once this initial phase is complete, the plan is to proceed with the Sim-to-Real transfer. This involves deploying the trained model onto a Raspberry Pi 4 embedded within the 3D-printed quadruped, allowing the movements achieved in simulation to be replicated in the real world.
 
 <details>
-  <summary>Isaac Gym Overview</summary>
+  <summary><b>Isaac Gym Overview</b></summary>
   <ol>
     Isaac Gym is NVIDIA’s prototype physics simulation environment for reinforcement learning research. It allows developers to experiment with end-to-end      GPU accelerated RL for physically based systems. Unlike other similar ‘gym’ style systems, in Isaac Gym, simulation can run on the GPU, storing results in GPU     tensors rather than copying them back to CPU memory. Isaac Gym includes a basic PPO implementation and a straightforward RL task system that can be used with      it, but users may substitute alternative task systems and RL algorithms. 
 
@@ -77,7 +77,7 @@ Starting from the URDF model, the goal is to design and train a neural network t
 
 
 <details>
-  <summary>SKRL Overview</summary>
+  <summary><b>SKRL Overview</summary</b></summary>
   <ol>
     Skrl is an open-source library for Reinforcement Learning written in Python. It allows loading and configuring NVIDIA Isaac Gym environments, enabling agents’ simultaneous training by scopes (subsets of environments among all available environments), which may or may not share resources, in the same run.
 
