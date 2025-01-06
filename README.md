@@ -148,7 +148,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Overview of Key Files
 
-In this section, you can see the main parts of the Isaac Gym folder.
+In this section, you can see an overview of the most important file in Isaac Gym folder.
 
 ### **Anymal.py:**
 <details>
