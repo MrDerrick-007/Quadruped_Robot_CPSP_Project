@@ -148,7 +148,9 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-**Explanation of the contents of anymal.py:**
+In this section, you can see the main parts of the Isaac Gym folder.
+
+**Anymal.py:**
 
 In the file "anymal.py," the main functions for initializing and training the environment are listed: `create_sim`, `pre_physics_step`, and `post_physics_step`. These are generic functions present in any environment training setup.
 
