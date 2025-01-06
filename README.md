@@ -256,6 +256,127 @@ This YAML configuration file is used to define the parameters and settings for t
      - Randomization is done using Gaussian distribution or scaling methods for various parameters, including gravity, friction, damping, and more.
 </details>
 
+---
+
+<details>
+  
+### torch_anymal_ppo.py
+This script is set up to train a reinforcement learning (RL) agent using the **Proximal Policy Optimization (PPO)** algorithm on the **Isaac Gym environment** for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
+
+### Key Components:
+1. **Dependencies and Libraries**:
+   - **`isaacgym`**: This is the library to work with Isaac Gym, NVIDIA’s high-performance physics simulator for training AI agents.
+   - **`torch`**: The popular deep learning framework is used for implementing the neural networks that will approximate the agent's policy and value functions.
+   - **`wandb`**: Weights & Biases is used for experiment tracking and visualization.
+   - **`skrl`**: This is a high-level reinforcement learning library that provides utilities for training agents like PPO, as well as environment wrappers, memory buffers, and schedulers.
+   - **`argparse`**: For handling command-line arguments (though it is not utilized in this snippet).
+
+2. **Setting the Random Seed**:
+   ```python
+   set_seed()  # This ensures that the environment and agent training are reproducible.
+   ```
+
+3. **Shared Model (Policy and Value)**:
+   The `Shared` class inherits from `GaussianMixin` and `DeterministicMixin`, which allow it to handle both stochastic (Gaussian) and deterministic actions. This model contains:
+   - **A neural network architecture** with three fully connected layers (256, 128, and 64 units) with `ELU` activation functions.
+   - **Mean layer (`mean_layer`)**: This produces the mean for the action distribution.
+   - **Log Standard Deviation (`log_std_parameter`)**: This represents the standard deviation of the action distribution, initialized to zeros.
+   - **Value layer (`value_layer`)**: This produces the value estimate for the current state.
+   
+   The `act` method handles action generation (either from a stochastic Gaussian policy or a deterministic one depending on the role).
+
+4. **Environment Setup**:
+   ```python
+   env = load_isaacgym_env_preview4(task_name="Anymal")
+   env = wrap_env(env)
+   device = env.device
+   ```
+   - The `load_isaacgym_env_preview4` function loads the Isaac Gym environment for the task `Anymal`, and `wrap_env` wraps it for easier use within the RL pipeline.
+   - The environment runs on the same device (`device`) as the model, which is determined by Isaac Gym.
+
+5. **Memory Buffer**:
+   ```python
+   memory = RandomMemory(memory_size=24, num_envs=env.num_envs, device=device)
+   ```
+   - The `RandomMemory` class stores the experiences (observations, actions, rewards, etc.) collected from each environment during training. The memory size is set to 24, and it's designed to handle multiple parallel environments.
+
+6. **Model Initialization**:
+   ```python
+   models["policy"] = Shared(env.observation_space, env.action_space, device)
+   models["value"] = models["policy"]
+   ```
+   - The model for both the policy and value functions is the same in this case (the `Shared` model). Both the `policy` and `value` use the same neural network architecture.
+
+7. **PPO Configuration**:
+   ```python
+   cfg = PPO_DEFAULT_CONFIG.copy()
+   cfg["rollouts"] = 24  # memory_size
+   cfg["learning_epochs"] = 5
+   cfg["mini_batches"] = 3
+   cfg["discount_factor"] = 0.99
+   cfg["learning_rate"] = 3e-4
+   cfg["learning_rate_scheduler"] = KLAdaptiveRL
+   cfg["learning_rate_scheduler_kwargs"] = {"kl_threshold": 0.008}
+   cfg["timesteps"] = 24000000  # This is the total number of timesteps for training
+   ```
+   - **PPO Default Configuration**: The PPO algorithm is configured with standard values like:
+     - `learning_rate`: 0.0003 (the learning rate for training the models).
+     - `rollouts`: Number of environments to sample from (24 environments in this case).
+     - `mini_batches`: Number of mini-batches to use for each update.
+     - `discount_factor`: The discount factor (`gamma`), set to 0.99, which determines how much future rewards are discounted.
+     - `learning_rate_scheduler`: Uses `KLAdaptiveRL`, which adjusts the learning rate based on the Kullback-Leibler (KL) divergence between the old and new policies.
+     - `kl_threshold`: Threshold for the KL divergence, used in adaptive learning rate scheduling.
+   
+   - **State Preprocessors**: Both the state and value are normalized using `RunningStandardScaler` to help with training stability.
+
+8. **PPO Agent Initialization**:
+   ```python
+   agent = PPO(models=models,
+               memory=memory,
+               cfg=cfg,
+               observation_space=env.observation_space,
+               action_space=env.action_space,
+               device=device)
+   ```
+   - The `PPO` agent is initialized with the specified configuration (`cfg`), models (policy and value), and memory buffer.
+
+9. **Loading Checkpoints**:
+   ```python
+   agent.load("./runs/torch/Anymal/buono/checkpoints/agent_82800.pt")
+   ```
+   - This loads a previously saved checkpoint so the agent can resume training from where it left off, rather than training from scratch.
+
+10. **Trainer Configuration**:
+    ```python
+    cfg_trainer = {"timesteps": 24000000, "headless": True}
+    trainer = SequentialTrainer(cfg=cfg_trainer, env=env, agents=agent)
+    ```
+    - **Trainer Configuration**: Configures the trainer to run for `24,000,000` timesteps (the number of total timesteps for training) and sets it to `headless` mode (no rendering).
+    - The `SequentialTrainer` is used to manage training with the environment and agent.
+
+11. **Training**:
+    ```python
+    trainer.train()
+    ```
+    - Starts the training process, where the agent interacts with the environment, collects experiences, and updates its policy using PPO.
+</details>
+
+---
+
+### Evaluation (commented out):
+```python
+# # ---------------------------------------------------------
+# # comment the code above: `trainer.train()`, and...
+# # uncomment the following lines to evaluate a trained agent
+# # ---------------------------------------------------------
+# from skrl.utils.huggingface import download_model_from_huggingface
+# path = download_model_from_huggingface("skrl/IsaacGymEnvs-Anymal-PPO", filename="agent.pt")
+# agent.load(path)
+# trainer.eval()
+```
+- If you want to evaluate a pre-trained agent (instead of training), you can download the model from Hugging Face and load it into the agent before running the `eval()` method.
+
+---
 
 
 ![](videos/final-training.gif)
