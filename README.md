@@ -74,6 +74,7 @@ Starting from the URDF model, the goal is to design and train a neural network t
   <summary>Isaac Gym Overview</summary>
   <ol>
     Isaac Gym is NVIDIA’s prototype physics simulation environment for reinforcement learning research. It allows developers to experiment with end-to-end      GPU accelerated RL for physically based systems. Unlike other similar ‘gym’ style systems, in Isaac Gym, simulation can run on the GPU, storing results in GPU     tensors rather than copying them back to CPU memory. Isaac Gym includes a basic PPO implementation and a straightforward RL task system that can be used with      it, but users may substitute alternative task systems and RL algorithms. 
+
   **More information on** 
     https://developer.nvidia.com/isaac-gym
 </ol>
