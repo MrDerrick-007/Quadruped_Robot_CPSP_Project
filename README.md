@@ -168,6 +168,7 @@ During training, the other two functions are continuously modified. The first, `
 The function `reset_idx` is applied only when the environment needs to be reset to its initial condition, due to various factors that will be explained later. `compute_observation` reloads the current state value onto the tensor. This function is generic for all environments and is specialized via the `compute_anymal_observation` function. `compute_reward` calculates the rewards, which will be explained later.
 
 <details>
+<summary><b>More info</b></summary>
   
 **Introduction to Rewards:**
 
@@ -221,7 +222,7 @@ Therefore, multiple simulations must be run while continuously varying the rewar
 This YAML configuration file is used to define the parameters and settings for the simulation of the robot in an environment, as part of a reinforcement learning setup in Isaac Gym.
 
 <details>
-
+<summary><b>More info</b></summary>
 ### General Structure:
 1. **name**: Specifies the name of the object to be simulated, which is "Anymal" (a robot model).
    
@@ -271,6 +272,7 @@ This YAML configuration file is used to define the parameters and settings for t
 This script is set up to train a reinforcement learning (RL) agent using the Proximal Policy Optimization (PPO) algorithm on the Isaac Gym environment for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
 
 <details>
+<summary><b>More info</b></summary>
 
 ### Key Components:
 1. **Dependencies and Libraries**:
