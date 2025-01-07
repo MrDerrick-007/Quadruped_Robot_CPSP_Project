@@ -159,7 +159,6 @@ More specifically, if you don't want to use any checkpoint, simply comment out t
 In this section, you can see an overview of the most important file in Isaac Gym folder.
 
 ### **Anymal.py:**
-<details>
 In the file "anymal.py," the main functions for initializing and training the environment are listed: `create_sim`, `pre_physics_step`, and `post_physics_step`. These are generic functions present in any environment training setup.
 
 The first function, `create_sim`, is used for initialization. It is responsible for creating the terrain (in our case, a flat, obstacle-free surface) and the environment, with the URDF correctly modified and implemented.
@@ -168,8 +167,8 @@ During training, the other two functions are continuously modified. The first, `
 
 The function `reset_idx` is applied only when the environment needs to be reset to its initial condition, due to various factors that will be explained later. `compute_observation` reloads the current state value onto the tensor. This function is generic for all environments and is specialized via the `compute_anymal_observation` function. `compute_reward` calculates the rewards, which will be explained later.
 
----
-
+<details>
+  
 **Introduction to Rewards:**
 
 The reward calculations and reset conditions are specifically handled in the `compute_anymal_reward` function. Rewards consist of the calculation of different parameters, each with its own purpose, which are used by the environment for proper training, aiming to achieve the highest possible score. Rewards are divided into positive rewards and penalties. The first type includes positive values that indicate to the environment when movements are performed correctly, while penalties are strictly negative values used to decrease the reward when incorrect movements, as defined in the code, are performed.
@@ -218,8 +217,10 @@ Therefore, multiple simulations must be run while continuously varying the rewar
 ---
 
 ### Anymal.yaml
-<details>
+
 This YAML configuration file is used to define the parameters and settings for the simulation of the robot in an environment, as part of a reinforcement learning setup in Isaac Gym.
+
+<details>
 
 ### General Structure:
 1. **name**: Specifies the name of the object to be simulated, which is "Anymal" (a robot model).
@@ -267,8 +268,9 @@ This YAML configuration file is used to define the parameters and settings for t
 ---
 ### torch_anymal_ppo.py
 
-<details>
 This script is set up to train a reinforcement learning (RL) agent using the Proximal Policy Optimization (PPO) algorithm on the Isaac Gym environment for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
+
+<details>
 
 ### Key Components:
 1. **Dependencies and Libraries**:
