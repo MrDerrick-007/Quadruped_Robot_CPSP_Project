@@ -146,6 +146,13 @@ To do this, you need to modify the following line of code in the `anymal.py` fil
     agent.load("./runs/torch/Anymal/buono/checkpoints/agent_82800.pt")
    ```
 More specifically, if you don't want to use any checkpoint, simply comment out the following line of code. On the other hand, if you want to use a different checkpoint, you just need to modify the path to the selected checkpoint.
+
+**Video demonstration with the checkpoint simulation**
+![](videos/final-training.gif)
+
+****Video demonstration without checkpoint****
+![](videos/no-trainig1.gif)
+
 <!-- USAGE EXAMPLES -->
 ## Overview of Key Files
 
@@ -377,14 +384,6 @@ This script is set up to train a reinforcement learning (RL) agent using the Pro
 </details>
 
 ---
-
-
-![](videos/final-training.gif)
-![](videos/no-trainig1.gif)
-![](videos/prob_fixing_joint.gif)
-
-Nota: l'algoritmo di RL che usate è PPO della classe actor-critic
-
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right"><a href="#readme-top">back to top</a></p>
