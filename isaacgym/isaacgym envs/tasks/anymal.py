@@ -114,14 +114,14 @@ class Anymal(VecTask):  #framework di isaacgym per fare ambienti paralleli
         for key in self.rew_scales.keys():
             self.rew_scales[key] *= self.dt
 
-        if self.viewer != None: #cose sulla cam view, ininfluenti per noi, skip
+        if self.viewer != None: #setting sulla cam view
             p = self.cfg["env"]["viewer"]["pos"]
             lookat = self.cfg["env"]["viewer"]["lookat"]
             cam_pos = gymapi.Vec3(p[0], p[1], p[2])
             cam_target = gymapi.Vec3(lookat[0], lookat[1], lookat[2])
             self.gym.viewer_camera_look_at(self.viewer, None, cam_pos, cam_target)
 
-        # get gym state tensors skip, lasciamo così
+        # get gym state tensors 
         actor_root_state = self.gym.acquire_actor_root_state_tensor(self.sim)
         dof_state_tensor = self.gym.acquire_dof_state_tensor(self.sim)
         net_contact_forces = self.gym.acquire_net_contact_force_tensor(self.sim)
@@ -211,7 +211,7 @@ class Anymal(VecTask):  #framework di isaacgym per fare ambienti paralleli
         asset_options.armature = 0.0
         asset_options.thickness = 0.01 #prima : 1
         asset_options.disable_gravity = False
-        #righe di codice che ci consentono di non far penetrarare zampe sul terreno e altre cosine
+        #righe di codice che ci consentono di non far penetrarare zampe sul terreno
         asset_options.override_com = True
         asset_options.override_inertia = True
         #--------------------------------------------------------------------------------------------------
@@ -407,7 +407,6 @@ class Anymal(VecTask):  #framework di isaacgym per fare ambienti paralleli
         #print('\n\shape 1:', self.last_actions.shape, 'shape 2:', rew_action_rate.shape)
 
         # cosmetic penalty for hip motion, per tenere il leg del cane attorno all'angolo iniziale
-        #anymal terrai però lo faceva per tenere shoulder ferme, mentre noi lo imponiamo su urdf alla brutta
         rew_hip = torch.sum(torch.abs(self.dof_pos[:, [1, 4, 7, 10]] - self.default_dof_pos[:, [1, 4, 7, 10]]), dim=1)* self.rew_scales["hip"]
         #print('\n\n', rew_hip)
 
@@ -432,9 +431,9 @@ class Anymal(VecTask):  #framework di isaacgym per fare ambienti paralleli
         #print('\n\nair time rew: ', rew_airTime)###
 
         #symmetric penalty
-        feet_air_time_FSx = self.feet_air_time[:,0] #praticamente sicuramente
+        feet_air_time_FSx = self.feet_air_time[:,0] 
         feet_air_time_FDx = self.feet_air_time[:,1]
-        feet_air_time_RSx = self.feet_air_time[:,2] #frate, cammina de cristo porca miseria abbiamo finito viva il bucio di culoma hai cambioato altro o hai rimesso valori vecchi?rimesso valori vecchi e rimeso action rate che non so perchè era scomparso da qui:
+        feet_air_time_RSx = self.feet_air_time[:,2] 
         feet_air_time_RDx = self.feet_air_time[:,3]
         rew_symmetric_st = torch.square(feet_air_time_FSx - feet_air_time_RDx) * self.rew_scales["symmetric"]
         rew_symmetric_nd = torch.square(feet_air_time_RSx - feet_air_time_FDx) * self.rew_scales["symmetric"]
@@ -452,8 +451,7 @@ class Anymal(VecTask):  #framework di isaacgym per fare ambienti paralleli
         # print('\n\nshape:', feet_positions_z.shape)###
 
 
-        total_reward = rew_lin_vel_xy + rew_ang_vel_z + rew_torque + rew_joint_acc + rew_airTime + rew_stumble + rew_orient + rew_symmetric_st + rew_symmetric_nd + rew_action_rate #+ rew_hip # stampa total-reward così capimao quando satura e fai video al volo, sono senza cell
-        total_reward = torch.clip(total_reward, 0., None)
+        total_reward = rew_lin_vel_xy + rew_ang_vel_z + rew_torque + rew_joint_acc + rew_airTime + rew_stumble + rew_orient + rew_symmetric_st + rew_symmetric_nd + rew_action_rate #+ rew_hip 
         print(sum(total_reward)/self.num_envs)
     
         # reset agents
