@@ -129,9 +129,9 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    git clone https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project.git
    ```
-2. Go inside "isaccgym envs" folder
+2. Go inside "isaccgym_envs" folder
    ```sh
-   cd Quadruped_Robot_CPSP_Project/isaacgym/isaacgym envs/
+   cd Quadruped_Robot_CPSP_Project/isaacgym/isaacgym_envs/
    ```
 3. Run the simulation with
    ```js
