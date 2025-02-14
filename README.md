@@ -139,7 +139,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 4. Run the simulation with
    ```js
-   python3 torch_anymal_ppo.py 
+   python3 torch_quadruped_ppo.py 
    ```
 <p align="right"><a href="#readme-top">back to top</a></p>
 
