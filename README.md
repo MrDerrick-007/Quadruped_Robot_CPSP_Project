@@ -145,7 +145,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Checkpoint
 You can choose whether to load a pre-trained model from a provided checkpoint or to start a simulation from scratch.
-To do this, you need to modify the following line of code in the `anymal.py` file.
+To do this, you need to modify the following line of code in the `quadruped.py` file.
  ```python
     agent.load("./runs/torch/Quadruped/optimal/checkpoints/agent_82800.pt")
    ```
@@ -162,8 +162,8 @@ More specifically, if you don't want to use any checkpoint, simply comment out t
 
 In this section, you can see an overview of the most important file in Isaac Gym folder.
 
-### **Anymal.py:**
-In the file "anymal.py," the main functions for initializing and training the environment are listed: `create_sim`, `pre_physics_step`, and `post_physics_step`. These are generic functions present in any environment training setup.
+### **Quadruped.py:**
+In the file "quadruped.py," the main functions for initializing and training the environment are listed: `create_sim`, `pre_physics_step`, and `post_physics_step`. These are generic functions present in any environment training setup.
 
 The first function, `create_sim`, is used for initialization. It is responsible for creating the terrain (in our case, a flat, obstacle-free surface) and the environment, with the URDF correctly modified and implemented.
 
@@ -182,7 +182,7 @@ The reward calculations and reset conditions are specifically handled in the `co
 
 **List with explanation of all rewards:**
 
-- **Velocity Tracking Reward:** First, the current movement velocity of the environment along the x and y axes (with the z axis perpendicular to the ground) is calculated. Then, the difference between the actual velocity and the desired velocity, set during the creation of the environment, is determined. In the `anymal.yaml` file, the desired velocity ranges along the x and y axes can be set under "randomCommandVelocityRanges." Since this is a reward, the value is made positive by squaring it and multiplying it by its parameter, training the environment to approach the desired velocity as closely as possible.
+- **Velocity Tracking Reward:** First, the current movement velocity of the environment along the x and y axes (with the z axis perpendicular to the ground) is calculated. Then, the difference between the actual velocity and the desired velocity, set during the creation of the environment, is determined. In the `quadruped.yaml` file, the desired velocity ranges along the x and y axes can be set under "randomCommandVelocityRanges." Since this is a reward, the value is made positive by squaring it and multiplying it by its parameter, training the environment to approach the desired velocity as closely as possible.
 
 - **Orientation Penalty:** This penalty calculates the torso's orientation, training the environment to keep the torso as parallel to the ground as possible. The coefficient multiplied by this parameter is negative. In an ideal upright position, the robot's local z-axis is aligned with the global gravity direction. This means the x and y components of gravity in the robot's local reference frame should be close to zero to maximize the reward.
 
@@ -206,7 +206,7 @@ To achieve the most desired movement, an important factor is the weight of the r
 
 To understand the weight of all parameters, we used the "wandb" library to save and plot all the parameters, monitoring the magnitude of individual rewards and the total reward simultaneously.
 
-Therefore, multiple simulations must be run while continuously varying the reward weights until a satisfactory result is achieved. The weights are specified in the `anymal.yaml` file or directly in the `anymal.py` file.
+Therefore, multiple simulations must be run while continuously varying the reward weights until a satisfactory result is achieved. The weights are specified in the `quadruped.yaml` file or directly in the `quadruped.py` file.
 
 ---
 
@@ -221,14 +221,14 @@ Therefore, multiple simulations must be run while continuously varying the rewar
 
 ---
 
-### Anymal.yaml
+### Quadruped.yaml
 
 This YAML configuration file is used to define the parameters and settings for the simulation of the robot in an environment, as part of a reinforcement learning setup in Isaac Gym.
 
 <details>
 <summary><b>More info</b></summary>
 ### General Structure:
-1. **name**: Specifies the name of the object to be simulated, which is "Anymal" (a robot model).
+1. **name**: Specifies the name of the object to be simulated, which is "Quadruped" (a robot model).
    
 2. **physics_engine**: Refers to the physics engine to be used, with its configuration coming from an external file (`config.yaml`).
 
@@ -271,7 +271,7 @@ This YAML configuration file is used to define the parameters and settings for t
 </details>
 
 ---
-### torch_anymal_ppo.py
+### torch_quadruped_ppo.py
 
 This script is set up to train a reinforcement learning (RL) agent using the Proximal Policy Optimization (PPO) algorithm on the Isaac Gym environment for a robot (likely `Anymal`). The script imports several components from the `skrl` library to define the agent, the environment, the memory buffer, and the RL trainer. Below is a detailed explanation of each section of the code.
 
@@ -302,11 +302,11 @@ This script is set up to train a reinforcement learning (RL) agent using the Pro
 
 4. **Environment Setup**:
    ```python
-   env = load_isaacgym_env_preview4(task_name="Anymal")
+   env = load_isaacgym_env_preview4(task_name="Quadruped")
    env = wrap_env(env)
    device = env.device
    ```
-   - The `load_isaacgym_env_preview4` function loads the Isaac Gym environment for the task `Anymal`, and `wrap_env` wraps it for easier use within the RL pipeline.
+   - The `load_isaacgym_env_preview4` function loads the Isaac Gym environment for the task `Quadruped`, and `wrap_env` wraps it for easier use within the RL pipeline.
    - The environment runs on the same device (`device`) as the model, which is determined by Isaac Gym.
 
 5. **Memory Buffer**:
@@ -357,7 +357,7 @@ This script is set up to train a reinforcement learning (RL) agent using the Pro
 
 9. **Loading Checkpoints**:
    ```python
-   agent.load("./runs/torch/Anymal/buono/checkpoints/agent_82800.pt")
+   agent.load("./runs/torch/Quadruped/optimal/checkpoints/agent_82800.pt")
    ```
    - This loads a previously saved checkpoint so the agent can resume training from where it left off, rather than training from scratch.
 
@@ -384,7 +384,7 @@ This script is set up to train a reinforcement learning (RL) agent using the Pro
 # # uncomment the following lines to evaluate a trained agent
 # # ---------------------------------------------------------
 # from skrl.utils.huggingface import download_model_from_huggingface
-# path = download_model_from_huggingface("skrl/IsaacGymEnvs-Anymal-PPO", filename="agent.pt")
+# path = download_model_from_huggingface("skrl/IsaacGymEnvs-Quadruped-PPO", filename="agent.pt")
 # agent.load(path)
 # trainer.eval()
 ```
