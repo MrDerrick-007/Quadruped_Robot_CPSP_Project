@@ -9,7 +9,7 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECTLOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/MrDerrick-007/Quadruped_Robot_CPSP_Project">
