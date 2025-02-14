@@ -126,7 +126,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 0. Install yaml package
-  ```sh
+   ```sh
    pip install pyyaml
    ```
 1. Clone the repo
