@@ -25,16 +25,13 @@
 # CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-from .anymal import Anymal
+from .quadruped import Quadruped
 from .factory.factory_task_gears import FactoryTaskGears
 from .factory.factory_task_insertion import FactoryTaskInsertion
 from .factory.factory_task_nut_bolt_pick import FactoryTaskNutBoltPick
 from .factory.factory_task_nut_bolt_place import FactoryTaskNutBoltPlace
 from .factory.factory_task_nut_bolt_screw import FactoryTaskNutBoltScrew
-
 from .dextreme.allegro_hand_dextreme import AllegroHandDextremeManualDR, AllegroHandDextremeADR
-
 
 from .industreal.industreal_task_pegs_insert import IndustRealTaskPegsInsert
 from .industreal.industreal_task_gears_insert import IndustRealTaskGearsInsert
@@ -73,7 +70,7 @@ isaacgym_task_map = {
     "AllegroKukaTwoArms": resolve_allegro_kuka_two_arms,
     "AllegroHandManualDR": AllegroHandDextremeManualDR,
     "AllegroHandADR": AllegroHandDextremeADR,
-    "Anymal": Anymal,
+    "Quadruped": Quadruped,
     "FactoryTaskGears": FactoryTaskGears,
     "FactoryTaskInsertion": FactoryTaskInsertion,
     "FactoryTaskNutBoltPick": FactoryTaskNutBoltPick,
