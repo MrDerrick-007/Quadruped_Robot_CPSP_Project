@@ -147,7 +147,7 @@ To get a local copy up and running follow these simple example steps.
 You can choose whether to load a pre-trained model from a provided checkpoint or to start a simulation from scratch.
 To do this, you need to modify the following line of code in the `anymal.py` file.
  ```python
-    agent.load("./runs/torch/Anymal/buono/checkpoints/agent_82800.pt")
+    agent.load("./runs/torch/Quadruped/buono/checkpoints/agent_82800.pt")
    ```
 More specifically, if you don't want to use any checkpoint, simply comment out the following line of code. On the other hand, if you want to use a different checkpoint, you just need to modify the path to the selected checkpoint.
 
